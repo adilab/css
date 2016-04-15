@@ -1,0 +1,20 @@
+{
+    "name": "adilab/css",
+    "description": "Adi CSS Tools for PHP",
+    "homepage": "https://github.com/adilab/css.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adrian Zurkiewicz",
+            "email": "adrian@adilab.net"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/adilab/css/issues"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    }
+}
