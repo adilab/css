@@ -16,7 +16,7 @@ $ composer require adilab/css
 
 Usage:
 -------------
-Usage of Css class.
+Usage of Css class. [Online demo.](http://adilab.net/projects/demo/css.php)
 ```php
 require('vendor/autoload.php');
 
@@ -28,3 +28,9 @@ $css->set('color', '#ff0000')->set('background-color: #ccc');
 
 echo "<div style='{$css}'>Hello world</div>";
 ```
+
+Documentation
+----------
+
+
+[API documentacion](http://adilab.net/projects/api/namespace-Adi.Css.html)
