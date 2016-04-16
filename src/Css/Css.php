@@ -17,8 +17,6 @@
 
 namespace Adi\Css;
 
-use Exception;
-
 /**
  * Css handler.
  *
@@ -34,7 +32,7 @@ class Css {
 	 * <code>
 	 * $css = new Css('display: inline-block;margin-right: 10px;min-width: 150px;');
 	 * $css->set('width: 20px');
-	 * $css->set('color', '#ff0000');
+	 * $css->set('color', '#ff0000')->set('background-color: #ccc');
 	 * echo $css;
 	 * </code>
 	 * 
@@ -57,12 +55,15 @@ class Css {
 	 * </code> 
 	 *
 	 * @param string $property
+	 * @return Css
 	 */
 	public function remove($property) {
 
 		$property = trim(strtolower($property));
 
 		unset($this->css[$property]);
+		
+		return $this;
 	}
 
 	/**
@@ -75,6 +76,7 @@ class Css {
 	 *
 	 * @param mixed $css CSS property or CSS expression string
 	 * @param string $value
+	 * @return Css
 	 * 
 	 */
 	public function set($css, $value = NULL) {
@@ -108,6 +110,7 @@ class Css {
 
 		$css = strtolower($css);
 		$this->css[$css] = $value;
+		return $this;
 	}
 
 	/**
